@@ -72,20 +72,20 @@ export default function Trust() {
   const promo = promos[current];
 
   return (
-    <section id="promo" className="py-16 bg-gray-50 overflow-hidden" ref={ref}>
+    <section id="promo" className="bg-chalk py-20 overflow-hidden" ref={ref}>
       <div className="max-w-5xl mx-auto px-5">
-        <div className={`text-center mb-10 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-          <span className="inline-block bg-blue-50 text-blue-600 text-xs font-bold px-4 py-1.5 rounded-full mb-3 tracking-wide uppercase">
+        <div className={`mb-12 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+          <span className="inline-block border border-ink/20 text-ink/50 text-xs font-bold px-4 py-1.5 rounded-full mb-4 tracking-widest uppercase">
             Promo Bulan Ini
           </span>
-          <h2 className="text-3xl md:text-4xl font-black text-gray-900">
-            Penawaran Spesial Untuk Kamu
+          <h2 className="text-4xl md:text-5xl font-extrabold text-ink leading-tight">
+            Penawaran Spesial<br />
+            <span className="italic">Untuk Kamu.</span>
           </h2>
         </div>
 
-        {/* Card — image left, text right */}
         <div
-          className={`relative bg-white rounded-[2rem] overflow-hidden shadow-xl border border-gray-100 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+          className={`relative overflow-hidden rounded-3xl border-2 border-ink transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
           <div
             className="flex flex-col sm:flex-row"
@@ -95,7 +95,7 @@ export default function Trust() {
               transition: 'opacity 0.35s ease, transform 0.35s ease',
             }}
           >
-            {/* Image — 4:5 ratio */}
+            {/* Image */}
             <div className="flex-shrink-0 w-full sm:w-[260px] md:w-[300px]">
               <div className="relative w-full" style={{ aspectRatio: '4/5' }}>
                 <img
@@ -103,37 +103,35 @@ export default function Trust() {
                   alt={promo.badge}
                   className="absolute inset-0 w-full h-full object-cover"
                 />
-                {/* Badge pill over image */}
-                <span className="absolute top-4 left-4 inline-block bg-blue-600 text-white text-[11px] font-bold px-3 py-1.5 rounded-full shadow">
+                <span className="absolute top-4 left-4 inline-block bg-lemon text-ink text-[11px] font-extrabold px-3 py-1.5 rounded-full uppercase tracking-wide">
                   {promo.badge}
                 </span>
               </div>
             </div>
 
-            {/* Text content */}
-            <div className="flex-1 p-7 md:p-10 flex flex-col justify-between">
+            {/* Content */}
+            <div className="flex-1 p-7 md:p-10 flex flex-col justify-between bg-chalk">
               <div>
-                <h3 className="text-2xl md:text-3xl font-black text-gray-900 leading-tight mb-3 whitespace-pre-line">{promo.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-7">{promo.subtitle}</p>
-
-                {/* Stats */}
+                <h3 className="text-2xl md:text-3xl font-extrabold text-ink leading-tight mb-3 whitespace-pre-line">{promo.title}</h3>
+                <p className="text-ink/50 text-sm leading-relaxed mb-7">{promo.subtitle}</p>
                 <div className="grid grid-cols-3 gap-3 mb-8">
                   {[
                     [promo.stat1, promo.stat1Label],
                     [promo.stat2, promo.stat2Label],
                     [promo.stat3, promo.stat3Label],
                   ].map(([val, label]) => (
-                    <div key={label} className="bg-blue-50 rounded-2xl px-3 py-3 text-center">
-                      <p className="text-xl font-black text-blue-700">{val}</p>
-                      <p className="text-[11px] text-blue-400 mt-0.5">{label}</p>
+                    <div key={label} className="bg-ink rounded-2xl px-3 py-3 text-center">
+                      <p className="text-xl font-extrabold text-lemon">{val}</p>
+                      <p className="text-[11px] text-chalk/40 mt-0.5">{label}</p>
                     </div>
                   ))}
                 </div>
               </div>
-
-              {/* CTA */}
-              <a href="https://wa.me/85252920848" target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3.5 rounded-2xl text-sm shadow-md hover:-translate-y-0.5 transition-all w-fit">
+              <a
+                href="https://wa.me/85252920848"
+                target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-ink hover:bg-ink-light text-chalk font-bold px-6 py-3.5 rounded-full text-sm hover:scale-105 transition-all w-fit"
+              >
                 {promo.cta}
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -142,27 +140,32 @@ export default function Trust() {
             </div>
           </div>
 
-          {/* Arrow controls */}
-          <button onClick={prev}
-            className="absolute left-3 bottom-4 sm:top-1/2 sm:bottom-auto sm:-translate-y-1/2 z-20 w-9 h-9 rounded-full bg-gray-100 hover:bg-blue-50 border border-gray-200 flex items-center justify-center text-gray-600 hover:text-blue-700 transition-all">
+          <button
+            onClick={prev}
+            className="absolute left-3 bottom-4 sm:top-1/2 sm:bottom-auto sm:-translate-y-1/2 z-20 w-9 h-9 rounded-full bg-ink text-chalk flex items-center justify-center hover:bg-ink-light transition-all"
+          >
             <ChevronLeft size={18} />
           </button>
-          <button onClick={next}
-            className="absolute right-3 bottom-4 sm:top-1/2 sm:bottom-auto sm:-translate-y-1/2 z-20 w-9 h-9 rounded-full bg-gray-100 hover:bg-blue-50 border border-gray-200 flex items-center justify-center text-gray-600 hover:text-blue-700 transition-all">
+          <button
+            onClick={next}
+            className="absolute right-3 bottom-4 sm:top-1/2 sm:bottom-auto sm:-translate-y-1/2 z-20 w-9 h-9 rounded-full bg-ink text-chalk flex items-center justify-center hover:bg-ink-light transition-all"
+          >
             <ChevronRight size={18} />
           </button>
         </div>
 
-        {/* Dot indicators */}
         <div className="flex gap-2 justify-center mt-5">
           {promos.map((_, i) => (
-            <button key={i} onClick={() => go(i, i > current ? 'right' : 'left')}
+            <button
+              key={i}
+              onClick={() => go(i, i > current ? 'right' : 'left')}
               className="transition-all duration-300 rounded-full"
               style={{
                 width: i === current ? 24 : 8,
                 height: 8,
-                background: i === current ? '#0057e7' : '#cbd5e1',
-              }} />
+                background: i === current ? '#0a0a0a' : '#c8bfb0',
+              }}
+            />
           ))}
         </div>
       </div>

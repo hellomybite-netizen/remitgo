@@ -2,35 +2,36 @@ import logo from '../assets/logo_baru_remitgo.png';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-950 text-gray-400 py-10">
+    <footer className="bg-ink border-t border-white/10 text-chalk/40 py-10">
       <div className="max-w-6xl mx-auto px-5">
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
-          {/* Brand */}
           <div className="text-center md:text-left">
-            <div className="flex items-center justify-center md:justify-start mb-3">
-              <img src={logo} alt="remit.go!" className="h-12 w-auto" />
+            <div className="flex items-center justify-center md:justify-start gap-2 mb-3">
+              <img src={logo} alt="remit.go!" className="h-10 w-auto" />
+              <span className="text-chalk font-extrabold text-lg">remit.go!</span>
             </div>
-            <p className="text-gray-500 text-sm font-medium">BRI Global Financial Services</p>
-            <p className="text-gray-600 text-xs mt-2 max-w-xs">
+            <p className="text-chalk/30 text-sm font-medium">BRI Global Financial Services</p>
+            <p className="text-chalk/20 text-xs mt-2 max-w-xs">
               Layanan keuangan untuk membantu PMI Hong Kong terhubung dengan keluarga di Indonesia.
             </p>
           </div>
 
-          {/* Links */}
-          <div className="flex flex-col items-center md:items-end gap-2">
+          <div className="flex flex-col items-center md:items-end gap-3">
             <div className="flex gap-6 text-sm">
-              <a href="#benefits" className="hover:text-white transition-colors">Fitur</a>
-              <a href="#how-it-works" className="hover:text-white transition-colors">Cara Pakai</a>
-              <a href="#promo" className="hover:text-white transition-colors">Promo</a>
-              <a href="#testimonials" className="hover:text-white transition-colors">Testimoni</a>
+              {[
+                { label: 'Fitur', href: '#benefits' },
+                { label: 'Cara Pakai', href: '#how-it-works' },
+                { label: 'Promo', href: '#promo' },
+                { label: 'Testimoni', href: '#testimonials' },
+              ].map((l) => (
+                <a key={l.href} href={l.href} className="hover:text-chalk transition-colors">{l.label}</a>
+              ))}
             </div>
-            <div className="flex gap-4 mt-2">
-              {/* Social icons placeholder */}
+            <div className="flex gap-3 mt-1">
               <a
                 href="https://wa.me/85252920848"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-gray-800 hover:bg-green-600 flex items-center justify-center transition-colors"
+                target="_blank" rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full bg-white/5 hover:bg-[#25d366] flex items-center justify-center transition-colors"
                 aria-label="WhatsApp"
               >
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -39,7 +40,7 @@ export default function Footer() {
               </a>
               <a
                 href="#"
-                className="w-8 h-8 rounded-full bg-gray-800 hover:bg-blue-600 flex items-center justify-center transition-colors"
+                className="w-9 h-9 rounded-full bg-white/5 hover:bg-gradient-to-br hover:from-pink-500 hover:to-yellow-400 flex items-center justify-center transition-colors"
                 aria-label="Instagram"
               >
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -50,13 +51,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-gray-600">
+        <div className="border-t border-white/5 mt-8 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-xs text-chalk/20">
             &copy; {new Date().getFullYear()} BRI Global Financial Services. All rights reserved.
           </p>
-          <div className="flex gap-4 text-xs text-gray-600">
-            <a href="#" className="hover:text-gray-400 transition-colors">Kebijakan Privasi</a>
-            <a href="#" className="hover:text-gray-400 transition-colors">Syarat & Ketentuan</a>
+          <div className="flex gap-4 text-xs text-chalk/20">
+            <a href="#" className="hover:text-chalk/50 transition-colors">Kebijakan Privasi</a>
+            <a href="#" className="hover:text-chalk/50 transition-colors">Syarat & Ketentuan</a>
           </div>
         </div>
       </div>

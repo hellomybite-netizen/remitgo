@@ -1,29 +1,36 @@
 export default function CtaFinal() {
   return (
-    <section className="bg-lemon py-24 overflow-hidden relative">
-      {/* Big decorative text background */}
+    <section className="bg-ink py-24 overflow-hidden relative">
+      {/* Decorative gradient blobs */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-10 translate-x-1/3 -translate-y-1/3 pointer-events-none"
+        style={{ background: 'radial-gradient(circle, #1a47d6, transparent)' }} />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full opacity-10 -translate-x-1/3 translate-y-1/3 pointer-events-none"
+        style={{ background: 'radial-gradient(circle, #7ec8e3, transparent)' }} />
+
+      {/* Big watermark text */}
       <div
         className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden"
         aria-hidden="true"
       >
-        <span
-          className="text-[20vw] font-extrabold text-ink/5 leading-none whitespace-nowrap"
-        >
+        <span className="text-[20vw] font-extrabold text-white/[0.03] leading-none whitespace-nowrap">
           remit.go!
         </span>
       </div>
 
       <div className="relative max-w-4xl mx-auto px-5 text-center">
-        <div className="inline-flex items-center gap-2 border-2 border-ink/20 text-ink/60 text-xs font-bold px-4 py-2 rounded-full mb-8 uppercase tracking-widest">
-          <span className="w-2 h-2 rounded-full bg-ink/40" />
+        <div className="inline-flex items-center gap-2 border border-sky/30 text-sky text-xs font-bold px-4 py-2 rounded-full mb-8 uppercase tracking-widest">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-pulse-ring absolute inline-flex h-full w-full rounded-full bg-sky opacity-75" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-sky" />
+          </span>
           Tersedia di iOS & Android
         </div>
 
-        <h2 className="text-5xl md:text-7xl font-extrabold text-ink leading-tight mb-6">
+        <h2 className="text-5xl md:text-7xl font-extrabold text-chalk leading-tight mb-6">
           Kirim Lebih Banyak.<br />
-          Bayar Lebih Sedikit.
+          <span className="text-sky">Bayar Lebih Sedikit.</span>
         </h2>
-        <p className="text-ink/50 text-lg mb-10 max-w-md mx-auto">
+        <p className="text-chalk/50 text-lg mb-10 max-w-md mx-auto">
           50.000+ PMI sudah membuktikan. Download sekarang, gratis.
         </p>
 
@@ -31,26 +38,26 @@ export default function CtaFinal() {
           <a
             href="https://play.google.com/store/apps/details?id=com.brchk.remitgo&pcampaignid=web_share"
             target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-3 bg-ink text-chalk font-bold px-8 py-4 rounded-full text-sm hover:bg-ink-light hover:scale-105 transition-all shadow-xl"
+            className="inline-flex items-center justify-center gap-3 bg-brand text-white font-bold px-8 py-4 rounded-full text-sm hover:bg-brand-dark hover:scale-105 transition-all shadow-2xl shadow-brand/40"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
               <path d="M3.18 23.76c.3.17.64.24.99.2l12.45-12.45L12.77 7.7 3.18 23.76zM21.4 10.26l-2.78-1.57-3.27 3.27 3.27 3.27 2.81-1.59c.8-.45.8-1.93-.03-2.38zM2.06 1.27C2.02 1.43 2 1.6 2 1.79v20.43c0 .19.02.36.06.52l12.45-12.45L2.06 1.27zM16.62 8.31L3.18.24C2.83.2 2.49.27 2.19.44l12.45 12.45 3.98-4.58z" />
             </svg>
             <div className="text-left">
-              <p className="text-[10px] text-chalk/50 leading-none">Download di</p>
+              <p className="text-[10px] text-white/60 leading-none">Download di</p>
               <p className="font-extrabold leading-tight">Google Play</p>
             </div>
           </a>
           <a
             href="https://apps.apple.com/id/app/remit-go-bri-global-financial/id6744429247"
             target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-3 bg-white border-2 border-ink text-ink font-bold px-8 py-4 rounded-full text-sm hover:bg-chalk transition-all shadow-xl"
+            className="inline-flex items-center justify-center gap-3 bg-white/10 border border-white/20 text-chalk font-bold px-8 py-4 rounded-full text-sm hover:bg-white/15 transition-all"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
               <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
             </svg>
             <div className="text-left">
-              <p className="text-[10px] text-ink/40 leading-none">Download di</p>
+              <p className="text-[10px] text-chalk/50 leading-none">Download di</p>
               <p className="font-extrabold leading-tight">App Store</p>
             </div>
           </a>
@@ -59,7 +66,7 @@ export default function CtaFinal() {
         <a
           href="https://wa.me/85252920848"
           target="_blank" rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 text-ink/60 hover:text-ink text-sm font-bold transition-all group"
+          className="inline-flex items-center gap-3 text-chalk/50 hover:text-chalk text-sm font-bold transition-all group"
         >
           <div className="w-9 h-9 rounded-full bg-[#25d366] flex items-center justify-center group-hover:scale-110 transition-transform">
             <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor">

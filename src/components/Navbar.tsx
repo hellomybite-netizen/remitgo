@@ -45,7 +45,7 @@ export default function Navbar() {
             href="https://wa.me/85252920848"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-bold bg-lemon text-ink px-5 py-2.5 rounded-full hover:brightness-110 transition-all hover:scale-105 active:scale-95"
+            className="text-sm font-bold bg-sky text-ink px-5 py-2.5 rounded-full hover:bg-sky-light transition-all hover:scale-105 active:scale-95"
           >
             Hubungi Kami
           </a>
@@ -79,7 +79,7 @@ export default function Navbar() {
             <a
               href="https://play.google.com/store/apps/details?id=com.brchk.remitgo&pcampaignid=web_share"
               target="_blank" rel="noopener noreferrer"
-              className="flex-1 text-center text-sm font-bold bg-lemon text-ink px-4 py-3 rounded-2xl"
+              className="flex-1 text-center text-sm font-bold bg-brand text-white px-4 py-3 rounded-2xl"
             >
               Google Play
             </a>

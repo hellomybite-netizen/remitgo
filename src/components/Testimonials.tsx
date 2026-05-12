@@ -55,12 +55,12 @@ export default function Testimonials() {
 
         {/* Header */}
         <div className={`mb-14 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-          <span className="inline-block border border-lemon/30 text-lemon text-xs font-bold px-4 py-1.5 rounded-full mb-4 tracking-widest uppercase">
+          <span className="inline-block border border-sky/30 text-sky text-xs font-bold px-4 py-1.5 rounded-full mb-4 tracking-widest uppercase">
             Bukti Nyata
           </span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-chalk leading-tight">
             Kata Mereka yang<br />
-            <span className="text-lemon">Sudah Merasakan.</span>
+            <span className="text-sky">Sudah Merasakan.</span>
           </h2>
         </div>
 
@@ -69,22 +69,22 @@ export default function Testimonials() {
           {testimonials.map((t, i) => (
             <div
               key={t.name}
-              className={`bg-ink-light border border-white/10 rounded-3xl p-5 flex flex-col hover:border-lemon/30 hover:-translate-y-1 transition-all duration-300 ${
+              className={`bg-ink-light border border-white/10 rounded-3xl p-5 flex flex-col hover:border-sky/30 hover:-translate-y-1 transition-all duration-300 ${
                 visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{ transitionDelay: `${i * 100}ms` }}
             >
-              <span className="inline-block bg-white/5 border border-white/10 text-chalk/50 text-[11px] font-bold px-2.5 py-1 rounded-full mb-4 self-start">
+              <span className="inline-block bg-brand/20 border border-brand/30 text-sky text-[11px] font-bold px-2.5 py-1 rounded-full mb-4 self-start">
                 {t.tag}
               </span>
               <div className="flex gap-0.5 mb-3">
                 {Array.from({ length: t.stars }).map((_, j) => (
-                  <Star key={j} size={12} fill="#ffe234" className="text-lemon" />
+                  <Star key={j} size={12} fill="#7ec8e3" className="text-sky" />
                 ))}
               </div>
               <p className="text-chalk/80 text-sm leading-relaxed mb-5 flex-1 font-medium">{t.text}</p>
               <div className="flex items-center gap-3 pt-4 border-t border-white/10">
-                <div className="w-9 h-9 rounded-full overflow-hidden flex-shrink-0 ring-1 ring-white/20">
+                <div className="w-9 h-9 rounded-full overflow-hidden flex-shrink-0 ring-1 ring-sky/30">
                   <img src={t.photo} alt={t.name} className="w-full h-full object-cover" />
                 </div>
                 <div>
@@ -110,7 +110,7 @@ export default function Testimonials() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-5">
-              <span className="inline-block bg-lemon text-ink text-[10px] font-extrabold px-2.5 py-1 rounded-full mb-2 uppercase tracking-wider">
+              <span className="inline-block bg-brand text-white text-[10px] font-extrabold px-2.5 py-1 rounded-full mb-2 uppercase tracking-wider">
                 Support Fisik
               </span>
               <p className="text-chalk font-bold text-sm">Kantor di Hong Kong</p>
@@ -127,7 +127,7 @@ export default function Testimonials() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-5">
-              <span className="inline-block bg-lemon text-ink text-[10px] font-extrabold px-2.5 py-1 rounded-full mb-2 uppercase tracking-wider">
+              <span className="inline-block bg-sky text-ink text-[10px] font-extrabold px-2.5 py-1 rounded-full mb-2 uppercase tracking-wider">
                 Komunitas PMI
               </span>
               <p className="text-chalk font-bold text-sm">Event Bersama PMI HK</p>
@@ -141,7 +141,7 @@ export default function Testimonials() {
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-3xl overflow-hidden relative group block"
-            style={{ aspectRatio: '4/3', background: '#111' }}
+            style={{ aspectRatio: '4/3', background: '#0a0f1a' }}
           >
             <img
               src="https://images.pexels.com/photos/6347729/pexels-photo-6347729.jpeg?auto=compress&cs=tinysrgb&w=600"
@@ -149,8 +149,8 @@ export default function Testimonials() {
               className="w-full h-full object-cover opacity-30 group-hover:opacity-40 transition-opacity duration-300"
             />
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-16 h-16 rounded-full bg-lemon flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
-                <Play size={22} fill="#0a0a0a" className="text-ink ml-1" />
+              <div className="w-16 h-16 rounded-full bg-brand flex items-center justify-center shadow-2xl shadow-brand/40 group-hover:scale-110 transition-transform duration-300">
+                <Play size={22} fill="white" className="text-white ml-1" />
               </div>
             </div>
             <div className="absolute bottom-0 left-0 right-0 p-5">
@@ -172,7 +172,7 @@ export default function Testimonials() {
             <span className="text-4xl font-extrabold text-chalk">4.9</span>
             <div>
               <div className="flex gap-0.5">
-                {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={14} fill="#ffe234" className="text-lemon" />)}
+                {Array.from({ length: 5 }).map((_, i) => <Star key={i} size={14} fill="#7ec8e3" className="text-sky" />)}
               </div>
               <p className="text-xs text-chalk/40 mt-0.5">50.000+ pengguna</p>
             </div>
@@ -194,7 +194,7 @@ export default function Testimonials() {
             <a
               href="https://play.google.com/store/apps/details?id=com.brchk.remitgo&pcampaignid=web_share"
               target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-1.5 bg-lemon text-ink text-xs font-bold px-3 py-2 rounded-xl hover:brightness-110 transition-all"
+              className="flex items-center gap-1.5 bg-brand text-white text-xs font-bold px-3 py-2 rounded-xl hover:bg-brand-dark transition-all"
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M3.18 23.76c.3.17.64.24.99.2l12.45-12.45L12.77 7.7 3.18 23.76zM21.4 10.26l-2.78-1.57-3.27 3.27 3.27 3.27 2.81-1.59c.8-.45.8-1.93-.03-2.38zM2.06 1.27C2.02 1.43 2 1.6 2 1.79v20.43c0 .19.02.36.06.52l12.45-12.45L2.06 1.27zM16.62 8.31L3.18.24C2.83.2 2.49.27 2.19.44l12.45 12.45 3.98-4.58z" />
@@ -206,13 +206,13 @@ export default function Testimonials() {
 
         {/* CTA */}
         <div
-          className={`mt-10 flex flex-col sm:flex-row gap-3 justify-center transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+          className={`mt-10 flex justify-center transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
           style={{ transitionDelay: '700ms' }}
         >
           <a
             href="https://play.google.com/store/apps/details?id=com.brchk.remitgo&pcampaignid=web_share"
             target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-3 bg-lemon text-ink font-bold px-8 py-4 rounded-full text-sm hover:brightness-110 hover:scale-105 transition-all"
+            className="inline-flex items-center justify-center gap-3 bg-brand text-white font-bold px-8 py-4 rounded-full text-sm hover:bg-brand-dark hover:scale-105 transition-all shadow-lg shadow-brand/30"
           >
             Bergabung Sekarang — Gratis!
           </a>

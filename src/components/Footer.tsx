@@ -2,7 +2,7 @@ import logo from '../assets/logo_baru_remitgo.png';
 
 export default function Footer() {
   return (
-    <footer className="bg-ink border-t border-white/10 text-chalk/40 py-10">
+    <footer className="bg-ink-light border-t border-white/10 text-chalk/40 py-10">
       <div className="max-w-6xl mx-auto px-5">
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
           <div className="text-center md:text-left">
@@ -40,7 +40,7 @@ export default function Footer() {
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-full bg-white/5 hover:bg-gradient-to-br hover:from-pink-500 hover:to-yellow-400 flex items-center justify-center transition-colors"
+                className="w-9 h-9 rounded-full bg-white/5 hover:bg-brand flex items-center justify-center transition-colors"
                 aria-label="Instagram"
               >
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
